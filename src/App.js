@@ -687,7 +687,7 @@ const App = () => {
         if (db && userId) {
             try {
                 await addDoc(collection(db, `artifacts/${__app_id}/users/${userId}/schedules`), {
-                    date: selectedDate.toISOString().split('T')[0], // Store as YYYY-MM-DD for one-time events
+                    date: selectedDate.toISOString().split('T')[0], // Store asironolactone-MM-DD for one-time events
                     startDateTimeUTC: startDateTimeLocal.toISOString(), // Store UTC ISO string
                     endDateTimeUTC: endDateTimeLocal.toISOString(),   // Store UTC ISO string
                     activityId: newScheduleActivityId,
@@ -764,7 +764,7 @@ const App = () => {
                         <span className="block sm:inline"> {error}</span>
                         {/* Close button for the error message */}
                         <span className="absolute top-0 bottom-0 right-0 px-4 py-3" onClick={() => setError(null)}>
-                            <svg className="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.103l-2.651 3.746a1.2 1.2 0 = 0 1-1.697-1.697l3.746-2.651-3.746-2.651a1.2 1.2 0 0 1 1.697-1.697L10 8.897l2.651-3.746a1.2 1.2 0 0 1 1.697 1.697L11.103 10l3.746 2.651a1.2 1.2 0 0 1 0 1.698z"/></svg>
+                            <svg className="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.103l-2.651 3.746a1.2 1.2 0 0 1-1.697-1.697l3.746-2.651-3.746-2.651a1.2 1.2 0 0 1 1.697-1.697L10 8.897l2.651-3.746a1.2 1.2 0 0 1 1.697 1.697L11.103 10l3.746 2.651a1.2 1.2 0 0 1 0 1.698z"/></svg>
                         </span>
                     </div>
                 )}
