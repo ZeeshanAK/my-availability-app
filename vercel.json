@@ -5,8 +5,9 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "installCommand": "npm install",
-        "buildCommand": "npm run build"
+        "installCommand": "npm install"
+        // We remove "buildCommand": "npm run build" here
+        // as we are directly serving the public folder
       }
     }
   ],
@@ -23,5 +24,6 @@
       "src": "/(.*)",
       "dest": "/public/index.html"
     }
-  ]
+  ],
+  "outputDirectory": "public"
 }
