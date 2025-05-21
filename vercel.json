@@ -6,8 +6,6 @@
       "use": "@vercel/static-build",
       "config": {
         "installCommand": "npm install"
-        // We remove "buildCommand": "npm run build" here
-        // as we are directly serving the public folder
       }
     }
   ],
